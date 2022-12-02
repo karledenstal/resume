@@ -5,7 +5,15 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Paytone One", "sans-serif"],
-				body: ["sofia-pro"],
+        body: ["sofia-pro"],
+      },
+      colors: {
+        pale: "#f7efe1",
+        vhsYellow: "#ffcc31",
+        vhsOrange: "#fe5d1e",
+        vhsRed: "#f91b25",
+        vhsMaroon: "#bf1d42",
+        vhsBurgundy: "#661f3f",
       },
     },
   },
