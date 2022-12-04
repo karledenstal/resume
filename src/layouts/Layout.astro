@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,39 +8,49 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/js.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.typekit.net/sse1ktg.css">
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="antialiased text-slate-500 bg-pale font-body">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/js.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+		<link
+      href="https://fonts.googleapis.com/css2?family=Paytone+One&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/sse1ktg.css" />
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="antialiased text-slate-900 dark:text-slate-200 bg-vhsPale dark:bg-vhsDark font-body">
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
-	
-	@font-face {
-		font-family: "atman";
-		src: url("fonts/atman-di.woff") format("woff"), url("fonts/atman-di.woff2") format("woff2");
-	}
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 
-	@layer base {
-		.font-icon {
-			font-family: "atman";
-		}
-	}
+  @font-face {
+    font-family: "atman";
+    src: url("fonts/atman-di.woff") format("woff"),
+      url("fonts/atman-di.woff2") format("woff2");
+  }
 
-	html {
-		height: 100%;
-	}
+  @layer base {
+    .font-icon {
+      font-family: "atman";
+    }
+  }
+
+  html {
+    height: 100%;
+  }
 </style>
